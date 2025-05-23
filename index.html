@@ -1,49 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Candletick — Coming Soon</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Candletick - Coming Soon</title>
   <style>
-    .flicker {
-      animation: flicker 1.5s infinite alternate;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      background: #1a1a1a;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .container {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .logo {
+      margin-bottom: 2rem;
+    }
+
+    /* Candle SVG animation */
+    .flame {
+      transform-origin: center bottom;
+      animation: flicker 2s infinite ease-in-out;
+      filter: drop-shadow(0 0 4px #ffa726);
     }
 
     @keyframes flicker {
-      0% { opacity: 1; }
-      50% { opacity: 0.7; }
-      100% { opacity: 1; }
+      0%, 100% { transform: rotate(0deg) scale(1); opacity: 1; }
+      50% { transform: rotate(3deg) scale(1.1); opacity: 0.8; }
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      color: #ff6f00;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px #ff6f00aa;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: #ccc;
+      line-height: 1.4;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
-<body class="bg-neutral-900 text-white flex flex-col justify-center items-center min-h-screen px-4">
-  <div class="text-center space-y-6">
-    <div class="text-4xl md:text-6xl font-bold">
-      <span class="flicker text-orange-400">🕯️</span> Candletick
+<body>
+  <div class="container">
+    <div class="logo" aria-label="Candletick candle flame logo" role="img">
+      <svg class="flame" width="80" height="140" viewBox="0 0 64 112" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" >
+        <ellipse cx="32" cy="70" rx="20" ry="42" fill="#FF6F00" />
+        <path d="M32 0C25 25 0 60 32 80C64 60 39 25 32 0Z" fill="#FFA726"/>
+        <ellipse cx="32" cy="75" rx="8" ry="20" fill="#FFF3E0" />
+      </svg>
     </div>
-    <p class="text-lg md:text-xl text-neutral-300">
-      We're lighting the wick.  
-      <br class="hidden sm:block" />
-      Something 🔥 is coming soon.
-    </p>
-    <form class="mt-6 flex flex-col sm:flex-row items-center gap-2">
-      <input
-        type="email"
-        placeholder="your@email.com"
-        class="px-4 py-2 rounded-full text-black focus:outline-none"
-        required
-      />
-      <button
-        type="submit"
-        class="bg-orange-500 hover:bg-orange-600 transition text-white px-5 py-2 rounded-full"
-      >
-        Notify Me
-      </button>
-    </form>
-    <p class="text-sm text-neutral-500 mt-4">
-      Stay in the glow. We'll only email when it's 🔥.
-    </p>
+
+    <h1>Candletick</h1>
+    <p>Lighting the wick — something <span style="font-size:1.2em;">🔥</span> is coming your way.<br />Stay tuned!</p>
+
+    <div class="footer">© 2025 Candletick. All rights reserved.</div>
   </div>
 </body>
 </html>
