@@ -1,0 +1,31 @@
+<svg width="320" height="100" viewBox="0 0 320 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Candletick logo no glow">
+  <defs>
+    <radialGradient id="flameGradient" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#FFD87F" />
+      <stop offset="100%" stop-color="#B07C10" />
+    </radialGradient>
+    <radialGradient id="flameShadow" cx="50%" cy="70%" r="40%">
+      <stop offset="0%" stop-color="#1B2A49" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0F1B2E" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE88D"/>
+      <stop offset="100%" stop-color="#B07C10"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Smooth flame shape -->
+  <path d="M62 28 
+           C56 63, 80 65, 62 92 
+           Q83 73, 62 28 Z" 
+        fill="url(#flameGradient)" />
+  <path d="M62 28 
+           C59 60, 74 70, 62 92 
+           Q76 75, 62 28 Z" 
+        fill="url(#flameShadow)" />
+
+  <!-- Text with no extra letter spacing for seamless word -->
+  <text x="95" y="68" font-family="'Merriweather', serif" font-weight="400" font-size="42" fill="#1B2A49" style="font-style: italic; letter-spacing: 0;">
+    candlet<tspan fill="url(#goldGradient)">i</tspan>ck
+  </text>
+</svg>
