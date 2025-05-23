@@ -3,7 +3,6 @@
 
 body {
   margin: 0;
-  background: #1a1a1a;
   color: #fff;
   font-family: 'Poppins', sans-serif;
   display: flex;
@@ -70,14 +69,8 @@ p {
   position: fixed;
   top: 15px;
   left: 15px;
-  width: 60px;
+  width: 10rem;
   height: auto;
   cursor: pointer;
   z-index: 1000;
-}
-
-@media (prefers-color-scheme: dark) {
-  #corner-logo {
-    filter: brightness(150%) drop-shadow(0 0 3px rgba(255,255,255,0.7));
-  }
 }
