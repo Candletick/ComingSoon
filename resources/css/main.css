@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+}
+
+.logo {
+  margin-bottom: 2rem;
+}
+
+/* Candle SVG animation */
+.flame {
+  transform-origin: center bottom;
+  animation: flicker 2s infinite ease-in-out;
+  filter: drop-shadow(0 0 4px #ffa726);
+}
+
+@keyframes flicker {
+  0%, 100% { transform: rotate(0deg) scale(1); opacity: 1; }
+  50% { transform: rotate(3deg) scale(1.1); opacity: 0.8; }
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: #ff6f00;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #ff6f00aa;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.footer {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+#corner-logo {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  z-index: 1000;
+}
