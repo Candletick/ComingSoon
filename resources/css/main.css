@@ -75,3 +75,9 @@ p {
   cursor: pointer;
   z-index: 1000;
 }
+
+@media (prefers-color-scheme: dark) {
+  #corner-logo {
+    filter: brightness(150%) drop-shadow(0 0 3px rgba(255,255,255,0.7));
+  }
+}
